@@ -6,8 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func HomeHandler(c *gin.Context) {
+func LogoutHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Homepage",
+		"message": "Anda berhasil logout!",
 	})
 }

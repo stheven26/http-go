@@ -8,14 +8,14 @@ import (
 )
 
 func ItemHandler(c *gin.Context) {
-	judul := c.Query("judul")
-	harga := c.Query("harga")
+	title := c.Query("title")
+	price := c.Query("price")
 
 	c.JSON(http.StatusOK, gin.H{
-		"message":   "ini item",
-		"item name": judul,
-		"price":     harga,
-		"Time":      time.Now(),
+		"message":      "item",
+		"product name": title,
+		"price":        price,
+		"Time":         time.Now(),
 	})
 }
 
@@ -25,7 +25,7 @@ func IdItemHandler(c *gin.Context) {
 	price := c.Query("price")
 	c.JSON(http.StatusOK, gin.H{
 		"id":           id,
-		"message":      "item name",
+		"message":      "item",
 		"product name": title,
 		"price":        price,
 	})
